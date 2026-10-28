@@ -9,12 +9,27 @@ public class Main {
         int backlogs = scanner.nextInt();
         int graduationYear = scanner.nextInt();
 
-        Candidate c = new Candidate(name, percentage, backlogs, graduationYear);
+        Candidate candidate = new Candidate(
+            name,
+            percentage,
+            backlogs,
+            graduationYear
+        );
 
-        System.out.println("Candidate: " + c.getName());
-        System.out.println("Percentage: " + c.getPercentage());
-        System.out.println("Backlogs: " + c.getBacklogs());
-        System.out.println("Graduation Year: " + c.getGraduationYear());
+        Job job = new Job(
+            "Infosys",
+            "Java Developer",
+            65.0,
+            0,
+            2026
+        );
+
+        System.out.println("Candidate: " + candidate.getName());
+        System.out.println("Company: " + job.getCompany());
+        System.out.println("Role: " + job.getRole());
+        System.out.println("Minimum Percentage: " + job.getMinimumPercentage());
+        System.out.println("Maximum Backlogs: " + job.getMaximumBacklogs());
+        System.out.println("Required Graduation Year: " + job.getRequiredGraduationYear());
 
         scanner.close();
     }
