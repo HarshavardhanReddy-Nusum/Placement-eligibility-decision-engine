@@ -9,10 +9,12 @@ public class Main {
         int backlogs = scanner.nextInt();
         int graduationYear = scanner.nextInt();
 
-        System.out.println("Candidate: " + name);
-        System.out.println("Percentage: " + percentage);
-        System.out.println("Backlogs: " + backlogs);
-        System.out.println("Graduation Year: " + graduationYear);
+        Candidate c = new Candidate(name, percentage, backlogs, graduationYear);
+
+        System.out.println("Candidate: " + c.getName());
+        System.out.println("Percentage: " + c.getPercentage());
+        System.out.println("Backlogs: " + c.getBacklogs());
+        System.out.println("Graduation Year: " + c.getGraduationYear());
 
         scanner.close();
     }
