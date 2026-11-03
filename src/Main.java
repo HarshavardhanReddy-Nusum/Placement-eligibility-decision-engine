@@ -35,8 +35,7 @@ public class Main {
             int requiredGraduationYear = scanner.nextInt();
 
             int requiredSkillCount = scanner.nextInt();
-            String[] requiredSkills =
-                new String[requiredSkillCount];
+            String[] requiredSkills = new String[requiredSkillCount];
 
             for (int j = 0; j < requiredSkillCount; j++) {
                 requiredSkills[j] = scanner.next();
@@ -52,10 +51,24 @@ public class Main {
             );
         }
 
-        Job selectedJob = jobs[0];
+        System.out.println();
+        System.out.println("AVAILABLE JOBS");
+
+        for (int i = 0; i < jobs.length; i++) {
+            System.out.println(
+                (i + 1) + ". " +
+                jobs[i].getCompany() +
+                " - " +
+                jobs[i].getRole()
+            );
+        }
+
+        int selectedJobNumber = scanner.nextInt();
+        Job selectedJob = jobs[selectedJobNumber - 1];
 
         EligibilityChecker checker = new EligibilityChecker();
 
+        System.out.println();
         System.out.println("================================");
         System.out.println("PLACEMENT ELIGIBILITY RESULT");
         System.out.println("================================");

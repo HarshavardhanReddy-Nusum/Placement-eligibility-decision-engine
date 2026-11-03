@@ -17,13 +17,9 @@ public class EligibilityChecker {
             boolean passed = rules[i].check(candidate, job);
 
             if (passed) {
-                System.out.println(
-                    rules[i].getRuleName() + " : PASS"
-                );
+                System.out.println(rules[i].getRuleName() + " : PASS");
             } else {
-                System.out.println(
-                    rules[i].getRuleName() + " : FAIL"
-                );
+                System.out.println(rules[i].getRuleName() + " : FAIL");
                 eligible = false;
             }
         }
